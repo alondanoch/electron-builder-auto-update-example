@@ -1,6 +1,6 @@
 {
   "name": "my-project",
-  "version": "0.0.16",
+  "version": "0.0.19",
   "author": "alon danoch 🐲 <alondanoch@hotmail.com>",
   "description": "An electron-vue project",
   "license": null,
@@ -29,9 +29,7 @@
       "package.json"
     ],
     "publish": {
-      "provider": "github",
-      "repo": "alondanoch/sparkdownload",
-      "token": "4838a7e8f1123a727381295d250066638501efa0"
+      "provider": "github"
     },
     "dmg": {
       "contents": [
