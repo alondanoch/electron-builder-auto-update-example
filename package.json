@@ -1,11 +1,12 @@
 {
   "name": "my-project",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "author": "alon danoch 🐲 <alondanoch@hotmail.com>",
   "description": "An electron-vue project",
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
+    "release": "npm run build",
     "build": "node .electron-vue/build.js && build",
     "build:dir": "node .electron-vue/build.js && build --dir",
     "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
