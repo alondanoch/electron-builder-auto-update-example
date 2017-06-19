@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, dialog } from 'electron'
 
 /**
  * Set `__static` path to static files in production
@@ -58,8 +58,27 @@ autoUpdater.logger = require("electron-log");
 autoUpdater.logger.transports.file.level = "info";
 
 autoUpdater.on('update-downloaded', () => {
-  console.log('update-downloaded lats quitAndInstall')
-  if (process.env.NODE_ENV === 'production') { autoUpdater.quitAndInstall() }
+  console.log('update-downloaded lats quitAndInstall');
+
+  if (process.env.NODE_ENV === 'production') { 
+    dialog.showMessageBox({
+      type: 'info',
+      title: 'Found Updates',
+      message: 'Found updates, do you want update now?',
+      buttons: ['Sure', 'No']
+    }, (buttonIndex) => {
+      if (buttonIndex === 0) {
+        const isSilent = true;
+        autoUpdater.quitAndInstall(isSilent); 
+        //autoUpdater.downloadUpdate()
+      } 
+      else {
+        updater.enabled = true
+        updater = null
+      }
+    })
+  }
+  
 })
 
 app.on('ready', () => {

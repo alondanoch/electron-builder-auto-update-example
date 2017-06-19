@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-    <h1>version v0.0.19</h1>
+    <h1>version v0.0.25 - oneClick=true</h1>
     <img id="logo" src="~@/assets/logo.png" alt="electron-vue">
     <main>
       <div class="left-side">

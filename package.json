@@ -1,6 +1,6 @@
 {
   "name": "my-project",
-  "version": "0.0.19",
+  "version": "0.0.25",
   "author": "alon danoch 🐲 <alondanoch@hotmail.com>",
   "description": "An electron-vue project",
   "license": null,
@@ -20,6 +20,7 @@
   "build": {
     "productName": "my-project",
     "appId": "org.simulatedgreg.electron-vue",
+    "artifactName": "${productName}-setup-${version}.${ext}",
     "directories": {
       "output": "build"
     },
@@ -47,8 +48,7 @@
       ]
     },
     "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true
+      "oneClick": false
     },
     "mac": {
       "icon": "build/icons/icon.icns"
