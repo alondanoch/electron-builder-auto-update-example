@@ -1,6 +1,6 @@
 {
   "name": "my-project",
-  "version": "0.0.25",
+  "version": "0.0.29",
   "author": "alon danoch 🐲 <alondanoch@hotmail.com>",
   "description": "An electron-vue project",
   "license": null,
@@ -48,7 +48,8 @@
       ]
     },
     "nsis": {
-      "oneClick": false
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     },
     "mac": {
       "icon": "build/icons/icon.icns"
@@ -68,6 +69,7 @@
     "vuex": "^2.3.1"
   },
   "devDependencies": {
+    "ajv": "^5.2.0",
     "babel-core": "^6.22.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-runtime": "^6.22.0",
@@ -83,7 +85,7 @@
     "del": "^2.2.1",
     "devtron": "^1.1.0",
     "electron": "^1.7.2",
-    "electron-builder": "^18.1.0",
+    "electron-builder": "^19.5.1",
     "electron-debug": "^1.1.0",
     "electron-devtools-installer": "^2.0.1",
     "electron-log": "^2.2.6",
