@@ -69,8 +69,8 @@ autoUpdater.on('update-downloaded', () => {
     }, (buttonIndex) => {
       if (buttonIndex === 0) {
         const isSilent = true;
-        autoUpdater.quitAndInstall(isSilent); 
-        //autoUpdater.downloadUpdate()
+        const isForceRunAfter = true; 
+        autoUpdater.quitAndInstall(isSilent, isForceRunAfter); 
       } 
       else {
         updater.enabled = true

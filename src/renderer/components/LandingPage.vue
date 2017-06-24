@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-    <h1>version v0.0.29</h1>
+    <h1>version 34 - ({{app.getVersion()}})</h1>
     <img id="logo" src="~@/assets/logo.png" alt="electron-vue">
     <main>
       <div class="left-side">
@@ -31,10 +31,16 @@
 </template>
 
 <script>
+  import electron from 'electron'
   import SystemInformation from './LandingPage/SystemInformation'
 
   export default {
     name: 'landing-page',
+    data: function () {
+      return {
+        app: electron.remote.app,
+      }
+    },
     components: { SystemInformation },
     methods: {
       open (link) {

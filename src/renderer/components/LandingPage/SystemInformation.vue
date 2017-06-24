@@ -26,6 +26,10 @@
         <div class="name">Platform:</div>
         <div class="value">{{ platform }}</div>
       </div>
+      <div class="item">
+        <div class="name">App:</div>
+        <div class="value">{{ app }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -39,7 +43,7 @@
         node: process.versions.node,
         path: '/',
         platform: require('os').platform(),
-        vue: require('vue/package.json').version
+        vue: require('vue/package.json').version,
       }
     }
   }
