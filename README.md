@@ -1,6 +1,6 @@
 # my-project
 
-> An electron-vue project
+> An electron-vue project to test electron updates with github
 
 #### Build Setup
 
