@@ -1,6 +1,6 @@
-# my-project
+# electron-builder-auto-update-example
 
-> An electron-vue project to test electron updates with github
+> A simple electron-vue project to test electron updates with github releases
 
 #### Build Setup
 
